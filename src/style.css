@@ -1,1 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
+
+@theme {
+  --color-bg-primary: #141414;
+  --color-bg-secondary: #1e1e1e;
+  --color-accent: #8fff66;
+  --color-additional: #ff9866;
+
+  --spacing-25px: 25px;
+
+  --font-josefin: 'Josefin Sans', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+@layer components {
+  .arrow {
+    @apply h-[13px] w-[13px];
+  }
+  .btn {
+    @apply bg-accent rounded-[10px] text-black px-[15px] py-2.5;
+  }
+  .link {
+    @apply text-accent flex gap-2.5 items-center font-medium;
+    svg {
+      @apply fill-current;
+    }
+  }
+  .custom-container {
+    @apply container px-25px mx-auto;
+  }
+}

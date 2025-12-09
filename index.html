@@ -1,13 +1,278 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>soundengineer-website</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-bg-primary text-white font-montserrat">
+    <header class="bg-bg-secondary fixed top-0 left-0 right-0 z-1">
+      <div class="custom-container py-[15px] flex justify-between items-center">
+        <div class="flex items-end gap-2.5">
+          <svg class="h-10 w-10 text-white">
+            <use href="/sprite.svg#wave" />
+          </svg>
+          <span class="font-josefin text-4xl/[1]">draganov</span>
+        </div>
+        <nav>
+          <ul class="flex gap-25px text-additional">
+            <li>
+              <a href="#">Обо мне</a>
+            </li>
+            <li>
+              <a href="#">Услуги</a>
+            </li>
+            <li>
+              <a href="#">Портфолио</a>
+            </li>
+            <li>
+              <a href="#">Отзывы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="relative">
+        <div
+          class="absolute inset-x-0 top-17.5 bottom-0 bg-[url('./src/assets/images/hero.png')] bg-position-[75%_center] bg-cover"
+        >
+          <div
+            class="size-full bg-radial-[circle_at_85%_50%] from-transparent to-55% to-black opacity-40"
+          ></div>
+        </div>
+        <div class="custom-container h-screen flex items-center relative">
+          <div>
+            <div class="mb-25px">
+              <h1 class="text-[32px] font-bold mb-[15px]">
+                Draganov
+                <span class="text-2xl text-accent">SoundEngineering</span>
+              </h1>
+              <p class="">Профессиональный звук для музыки, кино и рекламы</p>
+            </div>
+            <a href="#" class="btn flex items-center gap-2.5 w-fit">
+              Послушать
+              <svg class="arrow">
+                <use href="/sprite.svg#arrow" />
+              </svg>
+            </a>
+          </div>
+          <svg
+            class="fill-additional w-12.5 h-12.5 absolute bottom-10 right-1/2 translate-x-1/2 opacity-50"
+          >
+            <use href="/sprite.svg#scroll" />
+          </svg>
+        </div>
+      </section>
+      <section>
+        <div class="custom-container flex flex-col gap-25px pt-25 pb-12.5">
+          <div class="flex gap-2.5 text-accent font-semibold items-stretch">
+            <h2 class="text-2xl">Обо мне</h2>
+            <div>
+              <svg class="h-full aspect-square fill-current">
+                <use href="/sprite.svg#person" />
+              </svg>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta,
+            libero tincidunt consequat convallis, dui est rhoncus lacus, vel
+            viverra sem felis id massa. Fusce dictum sit amet sem sit amet
+            pretium. Phasellus hendrerit molestie pulvinar. Nulla posuere mattis
+            velit eu varius. Vestibulum eu turpis lobortis, porta massa nec,
+            facilisis diam. Duis vitae cursus eros. Ut nisl eros, blandit nec
+            porttitor eget, venenatis quis ligula. Pellentesque eu ligula risus.
+            Pellentesque ut efficitur ipsum, sed faucibus libero. Integer
+            tincidunt tincidunt ante quis porta. Pellentesque habitant morbi
+            tristique senectus et netus et malesuada fames ac turpis egestas. Ut
+            erat leo, dictum efficitur gravida non, dignissim eget ex.Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <a href="#" class="link">
+            Подробнее
+            <svg class="arrow -rotate-90">
+              <use href="/sprite.svg#arrow" />
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section>
+        <div class="custom-container py-12.5">
+          <div class="flex justify-between">
+            <h2 class="text-2xl text-accent font-semibold">
+              Популярные услуги
+            </h2>
+            <a class="link" href="#">
+              Все услуги
+              <svg class="arrow -rotate-90">
+                <use href="/sprite.svg#arrow" />
+              </svg>
+            </a>
+          </div>
+          <div>
+            <div>
+              <div>
+                <h3>Создание инструментала / аранжировка</h3>
+                <svg class="text-white fill-current">
+                  <use href="/sprite.svg#drum" />
+                </svg>
+              </div>
+              <p>
+                Разрабатываю оригинальные минусовки и аранжировки в нужном стиле
+                — от pop и R’n’B до trap, jazz или кинотемы. Подстраиваюсь под
+                голос, жанр и настроение трека.
+              </p>
+              <button>
+                Подробнее
+                <svg>
+                  <use class="arrow" href="/sprite.svg#arrow" />
+                </svg>
+              </button>
+              <span>От 7000 &#x20bd;</span>
+              <div>
+                <span>3-7 дней</span>
+                <button>Обсудить проект</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="custom-container">
+          <h2>Преимущества</h2>
+          <div>
+            <div>
+              <div>
+                <svg>
+                  <use href="/sprite.svg#fader" />
+                </svg>
+                <h3>Полный спектр звука</h3>
+              </div>
+              <p>От аранжировки и сведения до постпродакшна и саунд-дизайна.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="custom-container">
+          <div>
+            <h2>Портфолио</h2>
+            <a href="#">
+              Все работы
+              <svg class="arrow">
+                <use href="/sprite.svg#arrow" />
+              </svg>
+            </a>
+          </div>
+          <div>
+            <div>
+              <div>
+                <!-- music player -->
+              </div>
+              <h3>Название</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="custom-container">
+          <h2>Отзывы</h2>
+          <div>
+            <img src="./src/assets/images/disc.jpeg" alt="" />
+            <div>
+              <div>
+                <img src="./src/assets/images/cover1.jpeg" alt="" />
+                <div>
+                  <h3>Василий</h3>
+                  <p>
+                    Отличная работа! Звук чистый, баланс идеальный, работать
+                    было очень комфортно.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="custom-container">
+          <h2>Оставить заявку</h2>
+          <form>
+            <label>
+              Ваше имя
+              <input
+                type="text"
+                name="name"
+                placeholder="Как к вам обращаться?"
+              />
+            </label>
+            <label>
+              Email
+              <input
+                type="email"
+                name="email"
+                placeholder="Ваш email для ответа"
+              />
+            </label>
+            <label>
+              Сообщение
+              <textarea
+                name="message"
+                placeholder="Опишите задачу или задайте вопрос"
+              ></textarea>
+            </label>
+            <button>Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="custom-container">
+        <div>
+          <h2>Контакты</h2>
+          <ul>
+            <li>
+              <a href="mailto:draganovd@gmail.com">draganovd@gmail.com</a>
+            </li>
+            <li>
+              <a href="tel:+79234243223">+79234243223</a>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use href="/sprite.svg#telegram" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use href="/sprite.svg#tiktok" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use href="/sprite.svg#youtube" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <svg>
+            <use href="/sprite.svg#wave" />
+          </svg>
+          <span>draganov</span>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
