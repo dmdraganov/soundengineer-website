@@ -18,7 +18,7 @@
     @apply h-[13px] w-[13px];
   }
   .btn {
-    @apply bg-accent rounded-[10px] text-black px-[15px] py-2.5;
+    @apply bg-accent rounded-[10px] text-black px-[15px] py-2.5 font-medium hover:cursor-pointer;
   }
   .link {
     @apply text-accent flex gap-2.5 items-center font-medium;
