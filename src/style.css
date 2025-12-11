@@ -11,6 +11,14 @@
 
   --font-josefin: 'Josefin Sans', sans-serif;
   --font-montserrat: 'Montserrat', sans-serif;
+
+  --img-hero: url('./assets/images/hero.png');
+  --img-cover1: url('./assets/images/cover1.jpeg');
+  --img-cover2: url('./assets/images/cover2.jpeg');
+  --img-disk: url('./assets/images/disk.jpeg');
+  --img-photo1: url('./assets/images/photo1.jpg');
+  --img-photo2: url('./assets/images/photo2.jpg');
+  --img-studio: url('./assets/images/studio.jpg');
 }
 
 @layer components {
@@ -28,5 +36,18 @@
   }
   .custom-container {
     @apply container px-25px mx-auto;
+  }
+  .overlay {
+    @apply relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+  .tab {
+    @apply hover:cursor-pointer hover:text-accent hover:transition-colors hover:duration-100;
   }
 }
