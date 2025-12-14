@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>soundengineer-website</title>
   </head>
-  <body class="bg-bg-primary text-white font-montserrat">
+  <body
+    class="bg-bg-primary text-white font-montserrat min-h-screen flex flex-col"
+  >
     <header class="bg-bg-secondary fixed top-0 left-0 right-0 z-1">
       <div class="custom-container py-[15px] flex justify-between items-center">
         <a href="/" class="flex items-end gap-2.5">
@@ -16,7 +18,7 @@
           <span class="font-josefin text-4xl/[1]">draganov</span>
         </a>
         <nav>
-          <ul class="flex gap-25px text-additional">
+          <ul class="flex gap-25px">
             <li>
               <a href="about.html">Обо мне</a>
             </li>
@@ -36,7 +38,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="flex-1">
       <section class="relative">
         <div
           class="absolute inset-x-0 top-17.5 bottom-0 bg-(image:--img-hero) bg-position-[75%_center] bg-cover"
@@ -72,7 +74,7 @@
       </section>
       <section>
         <div class="custom-container flex flex-col gap-25px pt-25 pb-12.5">
-          <div class="flex gap-2.5 text-accent font-semibold items-stretch">
+          <div class="flex gap-2.5 font-semibold items-stretch">
             <h2 class="text-2xl">Обо мне</h2>
             <div>
               <svg class="h-full aspect-square fill-current">
@@ -105,9 +107,7 @@
       <section>
         <div class="custom-container py-12.5">
           <div class="flex justify-between mb-25px items-end">
-            <h2 class="text-2xl text-accent font-semibold">
-              Популярные услуги
-            </h2>
+            <h2 class="text-2xl font-semibold">Популярные услуги</h2>
             <a class="link" href="/services.html">
               Все услуги
               <svg class="arrow -rotate-90">
@@ -115,58 +115,21 @@
               </svg>
             </a>
           </div>
-          <div class="flex gap-25px flex-wrap" data-services-container></div>
+          <div class="grid gap-25px grid-cols-3" data-service-container></div>
         </div>
       </section>
       <section>
         <div class="custom-container py-25">
-          <h2 class="text-2xl text-accent font-semibold text-center mb-25px">
+          <h2 class="text-2xl font-semibold text-center mb-25px">
             Преимущества
           </h2>
-          <div class="flex gap-25px flex-wrap">
-            <div class="flex-[1_1_240px]">
-              <div class="flex gap-[15px] items-center mb-[15px]">
-                <svg class="fill-white aspect-square h-6">
-                  <use href="/sprite.svg#fader" />
-                </svg>
-                <h3 class="font-semibold">Полный спектр звука</h3>
-              </div>
-              <p>От аранжировки и сведения до постпродакшна и саунд-дизайна.</p>
-            </div>
-            <div class="flex-[1_1_240px]">
-              <div class="flex gap-[15px] items-center mb-[15px]">
-                <svg class="fill-white aspect-square h-6">
-                  <use href="/sprite.svg#fader" />
-                </svg>
-                <h3 class="font-semibold">Полный спектр звука</h3>
-              </div>
-              <p>От аранжировки и сведения до постпродакшна и саунд-дизайна.</p>
-            </div>
-            <div class="flex-[1_1_240px]">
-              <div class="flex gap-[15px] items-center mb-[15px]">
-                <svg class="fill-white aspect-square h-6">
-                  <use href="/sprite.svg#fader" />
-                </svg>
-                <h3 class="font-semibold">Полный спектр звука</h3>
-              </div>
-              <p>От аранжировки и сведения до постпродакшна и саунд-дизайна.</p>
-            </div>
-            <div class="flex-[1_1_240px]">
-              <div class="flex gap-[15px] items-center mb-[15px]">
-                <svg class="fill-white aspect-square h-6">
-                  <use href="/sprite.svg#fader" />
-                </svg>
-                <h3 class="font-semibold">Полный спектр звука</h3>
-              </div>
-              <p>От аранжировки и сведения до постпродакшна и саунд-дизайна.</p>
-            </div>
-          </div>
+          <div class="flex gap-25px flex-wrap" data-benefit-container></div>
         </div>
       </section>
       <section id="portfolio" class="scroll-m-17.5">
         <div class="custom-container py-12.5">
           <div class="flex justify-between items-end mb-25px">
-            <h2 class="text-2xl font-semibold text-accent">Портфолио</h2>
+            <h2 class="text-2xl font-semibold">Портфолио</h2>
             <a class="link" href="/portfolio.html">
               Все работы
               <svg class="arrow -rotate-90">
@@ -174,74 +137,22 @@
               </svg>
             </a>
           </div>
-          <div class="grid grid-cols-4 gap-25px">
-            <div class="text-center">
-              <div
-                class="w-full aspect-square bg-(image:--img-cover1) bg-cover bg-center]"
-              >
-                <!-- music player -->
-              </div>
-              <h3 class="my-2.5">Название</h3>
-            </div>
-          </div>
+          <div class="grid grid-cols-4 gap-25px" data-project-container></div>
         </div>
       </section>
       <section>
         <div class="custom-container flex flex-col gap-25px items-center py-25">
           <h2 class="text-2xl font-semibold text-accent">Отзывы</h2>
-          <div class="flex gap-25px items-end flex-wrap-reverse">
+          <div class="w-4/5 flex gap-25px items-end flex-wrap-reverse">
             <img
               class="aspect-square max-w-[470px] min-w-3/7 flex-1 rounded-[20px] object-cover"
               src="/disk.jpeg"
-              alt=""
+              alt="CD-диск"
             />
-            <div class="flex-[1_1_400px] flex flex-col gap-25px">
-              <div class="flex gap-25px">
-                <img
-                  class="rounded-full h-12.5 aspect-square"
-                  src="/src/assets/images/cover1.jpeg"
-                  alt=""
-                />
-                <div>
-                  <h3 class="font-semibold mb-2.5">Василий</h3>
-                  <p class="mb-[15px]">
-                    Отличная работа! Звук чистый, баланс идеальный, работать
-                    было очень комфортно.
-                  </p>
-                  <button class="btn">Послушать</button>
-                </div>
-              </div>
-              <div class="flex gap-25px">
-                <img
-                  class="rounded-full h-12.5 aspect-square"
-                  src="/src/assets/images/cover1.jpeg"
-                  alt=""
-                />
-                <div>
-                  <h3 class="font-semibold mb-2.5">Василий</h3>
-                  <p class="mb-[15px]">
-                    Отличная работа! Звук чистый, баланс идеальный, работать
-                    было очень комфортно.
-                  </p>
-                  <button class="btn">Послушать</button>
-                </div>
-              </div>
-              <div class="flex gap-25px">
-                <img
-                  class="rounded-full h-12.5 aspect-square"
-                  src="/src/assets/images/cover1.jpeg"
-                  alt=""
-                />
-                <div>
-                  <h3 class="font-semibold mb-2.5">Василий</h3>
-                  <p class="mb-[15px]">
-                    Отличная работа! Звук чистый, баланс идеальный, работать
-                    было очень комфортно.
-                  </p>
-                  <button class="btn">Послушать</button>
-                </div>
-              </div>
-            </div>
+            <div
+              class="flex-[1_1_400px] flex flex-col gap-25px"
+              data-review-container
+            ></div>
           </div>
         </div>
       </section>
@@ -250,7 +161,7 @@
           class="custom-container pt-12.5 pb-25 flex flex-col gap-25px items-center"
         >
           <h2 class="text-2xl font-semibold text-accent">Оставить заявку</h2>
-          <form class="flex flex-col gap-[15px] w-[410px]">
+          <form class="flex flex-col gap-[15px] w-[410px]" data-form>
             <label>
               Ваше имя
               <input
@@ -258,6 +169,7 @@
                 type="text"
                 name="name"
                 placeholder="Как к вам обращаться?"
+                required
               />
             </label>
             <label>
@@ -267,6 +179,7 @@
                 type="email"
                 name="email"
                 placeholder="Ваш email для ответа"
+                required
               />
             </label>
             <label>
@@ -276,6 +189,7 @@
                 name="message"
                 rows="6"
                 placeholder="Опишите задачу или задайте вопрос"
+                required
               ></textarea>
             </label>
             <button class="btn w-fit">Отправить</button>
@@ -297,21 +211,21 @@
             <li>
               <ul class="flex gap-2.5">
                 <li>
-                  <a href="#">
+                  <a href="https://web.telegram.org">
                     <svg class="fill-additional w-25px aspect-square">
                       <use href="/sprite.svg#telegram" />
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.tiktok.com/explore">
                     <svg class="fill-additional w-25px aspect-square">
                       <use href="/sprite.svg#tiktok" />
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.youtube.com/">
                     <svg
                       class="fill-additional w-25px aspect-square"
                       viewBox="0 0 24 24"
@@ -329,14 +243,34 @@
             </li>
           </ul>
         </div>
-        <div class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
           <span class="font-josefin text-4xl/[1]">draganov</span>
-        </div>
+        </a>
       </div>
     </footer>
+    <div
+      class="fixed inset-0 bg-black/50 z-2 flex items-center justify-center hidden"
+      data-modal
+    >
+      <div
+        class="w-full max-w-[505px] rounded-[35px] bg-bg-secondary p-25px flex flex-col gap-25px items-center"
+      >
+        <div class="flex flex-col gap-2.5">
+          <h2 class="text-2xl font-semibold">
+            Спасибо! Ваша заявка отправлена.
+          </h2>
+          <p>
+            Я свяжусь с вами в ближайшее время, чтобы уточнить детали и обсудить
+            задачу.
+          </p>
+        </div>
+        <button class="btn bg-accent" data-modal-close>Закрыть</button>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/pages/home.ts"></script>
   </body>
 </html>

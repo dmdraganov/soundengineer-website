@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>services</title>
   </head>
-  <body class="bg-bg-primary text-white font-montserrat pt-17.5">
+  <body
+    class="bg-bg-primary text-white font-montserrat pt-17.5 min-h-screen flex flex-col"
+  >
     <header class="bg-bg-secondary fixed top-0 left-0 right-0 z-1">
       <div class="custom-container py-[15px] flex justify-between items-center">
         <a href="/" class="flex items-end gap-2.5">
@@ -15,7 +17,7 @@
           <span class="font-josefin text-4xl/[1]">draganov</span>
         </a>
         <nav>
-          <ul class="flex gap-25px text-additional">
+          <ul class="flex gap-25px">
             <li>
               <a href="about.html">Обо мне</a>
             </li>
@@ -35,7 +37,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="flex-1">
       <div class="py-12.5 bg-(image:--img-studio) bg-center bg-cover overlay">
         <h1 class="text-2xl text-accent font-semibold text-center relative">
           Мои услуги
@@ -43,104 +45,46 @@
       </div>
       <section>
         <div class="custom-container pt-12.5 pb-25">
-          <div class="flex gap-25px justify-center mb-25px">
-            <button class="tab">Музыка</button>
-            <button class="tab">Постпродакшн</button>
-            <button class="tab">Подкасты и речь</button>
-            <button class="tab">Коммерческие проекты</button>
-          </div>
-          <div class="grid grid-cols-3 gap-25px">
-            <div
-              class="flex-1 flex flex-col gap-[15px] bg-bg-secondary rounded-[35px] p-25px"
-            >
-              <div class="flex gap-[15px]">
-                <h3 class="flex-1 text-2xl font-semibold">
-                  Создание инструментала / аранжировка
-                </h3>
-                <svg class="fill-white h-7.5 aspect-square">
-                  <use href="/sprite.svg#drum" />
-                </svg>
-              </div>
-              <p class="">
-                Разрабатываю оригинальные минусовки и аранжировки в нужном стиле
-                — от pop и R’n’B до trap, jazz или кинотемы. Подстраиваюсь под
-                голос, жанр и настроение трека.
-              </p>
-              <button class="font-semibold flex gap-2.5 items-center">
-                Подробнее
-                <svg class="arrow fill-white">
-                  <use href="/sprite.svg#arrow" />
-                </svg>
-              </button>
-              <span class="text-[32px] font-medium text-right">
-                От 7000 &#x20bd;
-              </span>
-              <div class="flex justify-between items-center">
-                <span class="text-additional font-medium">3-7 дней</span>
-                <a href="/contacts.html" class="btn">Обсудить проект</a>
-              </div>
-            </div>
-            <div
-              class="flex-1 flex flex-col gap-[15px] bg-bg-secondary rounded-[35px] p-25px"
-            >
-              <div class="flex gap-[15px]">
-                <h3 class="flex-1 text-2xl font-semibold">
-                  Создание инструментала / аранжировка
-                </h3>
-                <svg class="fill-white h-7.5 aspect-square">
-                  <use href="/sprite.svg#drum" />
-                </svg>
-              </div>
-              <p class="">
-                Разрабатываю оригинальные минусовки и аранжировки в нужном стиле
-                — от pop и R’n’B до trap, jazz или кинотемы. Подстраиваюсь под
-                голос, жанр и настроение трека.
-              </p>
-              <button class="font-semibold flex gap-2.5 items-center">
-                Подробнее
-                <svg class="arrow fill-white">
-                  <use href="/sprite.svg#arrow" />
-                </svg>
-              </button>
-              <span class="text-[32px] font-medium text-right">
-                От 7000 &#x20bd;
-              </span>
-              <div class="flex justify-between items-center">
-                <span class="text-additional font-medium">3-7 дней</span>
-                <a href="/contacts.html" class="btn">Обсудить проект</a>
-              </div>
-            </div>
-            <div
-              class="flex-1 flex flex-col gap-[15px] bg-bg-secondary rounded-[35px] p-25px"
-            >
-              <div class="flex gap-[15px]">
-                <h3 class="flex-1 text-2xl font-semibold">
-                  Создание инструментала / аранжировка
-                </h3>
-                <svg class="fill-white h-7.5 aspect-square">
-                  <use href="/sprite.svg#drum" />
-                </svg>
-              </div>
-              <p class="">
-                Разрабатываю оригинальные минусовки и аранжировки в нужном стиле
-                — от pop и R’n’B до trap, jazz или кинотемы. Подстраиваюсь под
-                голос, жанр и настроение трека.
-              </p>
-              <button class="font-semibold flex gap-2.5 items-center">
-                Подробнее
-                <svg class="arrow fill-white">
-                  <use href="/sprite.svg#arrow" />
-                </svg>
-              </button>
-              <span class="text-[32px] font-medium text-right">
-                От 7000 &#x20bd;
-              </span>
-              <div class="flex justify-between items-center">
-                <span class="text-additional font-medium">3-7 дней</span>
-                <a href="/contacts.html" class="btn">Обсудить проект</a>
-              </div>
-            </div>
-          </div>
+          <fieldset
+            class="flex gap-25px justify-center mb-25px"
+            name="category"
+            data-tabs-container
+          >
+            <input
+              type="radio"
+              name="category"
+              id="category-music"
+              value="music"
+              class="tab hidden"
+              checked
+            />
+            <label for="category-music"> Музыка </label>
+            <input
+              type="radio"
+              name="category"
+              id="category-post-production"
+              value="postProduction"
+              class="tab hidden"
+            />
+            <label for="category-post-production"> Постпродакшн </label>
+            <input
+              type="radio"
+              name="category"
+              id="category-speech"
+              value="speech"
+              class="tab hidden"
+            />
+            <label for="category-speech"> Подкасты и речь </label>
+            <input
+              type="radio"
+              name="category"
+              id="category-commercial"
+              value="commercial"
+              class="tab hidden"
+            />
+            <label for="category-commercial"> Коммерческие проекты </label>
+          </fieldset>
+          <div class="grid grid-cols-3 gap-25px" data-service-container></div>
         </div>
       </section>
     </main>
@@ -158,21 +102,21 @@
             <li>
               <ul class="flex gap-2.5">
                 <li>
-                  <a href="#">
+                  <a href="https://web.telegram.org">
                     <svg class="fill-additional w-25px aspect-square">
                       <use href="/sprite.svg#telegram" />
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.tiktok.com/explore">
                     <svg class="fill-additional w-25px aspect-square">
                       <use href="/sprite.svg#tiktok" />
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.youtube.com/">
                     <svg
                       class="fill-additional w-25px aspect-square"
                       viewBox="0 0 24 24"
@@ -190,14 +134,15 @@
             </li>
           </ul>
         </div>
-        <div class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
           <span class="font-josefin text-4xl/[1]">draganov</span>
-        </div>
+        </a>
       </div>
     </footer>
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/pages/services.ts"></script>
   </body>
 </html>

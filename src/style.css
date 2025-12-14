@@ -26,7 +26,7 @@
     @apply h-[13px] w-[13px];
   }
   .btn {
-    @apply bg-accent rounded-[10px] text-black px-[15px] py-2.5 font-medium hover:cursor-pointer;
+    @apply bg-accent rounded-[10px] text-bg-primary px-[15px] py-2.5 font-medium hover:cursor-pointer;
   }
   .link {
     @apply text-accent flex gap-2.5 items-center font-medium;
@@ -39,7 +39,6 @@
   }
   .overlay {
     @apply relative;
-
     &::before {
       content: '';
       position: absolute;
@@ -48,6 +47,12 @@
     }
   }
   .tab {
-    @apply hover:cursor-pointer hover:text-accent hover:transition-colors hover:duration-100;
+    &:checked + label,
+    & + label {
+      @apply hover:cursor-pointer;
+    }
+    &:checked + label {
+      @apply text-accent hover:transition-colors hover:duration-100;
+    }
   }
 }

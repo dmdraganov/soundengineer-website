@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>services</title>
   </head>
-  <body class="bg-bg-primary text-white font-montserrat pt-17.5">
+  <body
+    class="bg-bg-primary text-white font-montserrat pt-17.5 min-h-screen flex flex-col"
+  >
     <header class="bg-bg-secondary fixed top-0 left-0 right-0 z-1">
       <div class="custom-container py-[15px] flex justify-between items-center">
         <a href="/" class="flex items-end gap-2.5">
@@ -15,7 +17,7 @@
           <span class="font-josefin text-4xl/[1]">draganov</span>
         </a>
         <nav>
-          <ul class="flex gap-25px text-additional">
+          <ul class="flex gap-25px">
             <li>
               <a href="about.html">Обо мне</a>
             </li>
@@ -35,7 +37,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="flex-1">
       <div
         class="py-12.5 bg-[url('../assets/images/studio.jpg')] bg-center bg-cover overlay"
       >
@@ -44,7 +46,132 @@
         </h1>
       </div>
       <section>
-        <div class="custom-container pt-12.5 pb-25"></div>
+        <div class="custom-container py-12.5">
+          <fieldset
+            class="flex gap-25px mb-12.5"
+            name="category"
+            data-tabs-container
+          >
+            <input
+              type="radio"
+              name="category"
+              id="category-all"
+              value="all"
+              class="tab hidden"
+              checked
+            />
+            <label for="category-all"> Всё </label>
+            <input
+              type="radio"
+              name="category"
+              id="category-music"
+              value="music"
+              class="tab hidden"
+            />
+            <label for="category-music"> Музыка </label>
+            <input
+              type="radio"
+              name="category"
+              id="category-post-production"
+              value="postProduction"
+              class="tab hidden"
+            />
+            <label for="category-post-production"> Постпродакшн </label>
+            <input
+              type="radio"
+              name="category"
+              id="category-speech"
+              value="speech"
+              class="tab hidden"
+            />
+            <label for="category-speech"> Подкасты и речь </label>
+            <input
+              type="radio"
+              name="category"
+              id="category-commercial"
+              value="commercial"
+              class="tab hidden"
+            />
+            <label for="category-commercial"> Коммерческие проекты </label>
+          </fieldset>
+          <div class="grid grid-cols-2 gap-25px" data-review-container></div>
+        </div>
+      </section>
+      <section>
+        <div class="custom-container py-25 flex flex-col gap-25px items-center">
+          <h2 class="text-2xl text-accent font-semibold">Оставить отзыв</h2>
+          <form
+            class="flex flex-col gap-5 w-full max-w-[410px]"
+            data-form="review"
+          >
+            <div class="flex flex-col items-center gap-2.5">
+              <label
+                for="avatar"
+                class="relative w-25 h-25 rounded-full border-2 border-dashed border-white/50 text-white/50 flex items-center justify-center cursor-pointer hover:border-accent hover:text-accent transition-colors"
+              >
+                <img
+                  data-avatar="preview"
+                  class="absolute w-full h-full rounded-full object-cover hidden"
+                  alt="Превью аватара"
+                />
+                <svg
+                  data-avatar="placeholder"
+                  class="w-10 h-10 fill-current transition-colors"
+                >
+                  <use href="/sprite.svg#person"></use>
+                </svg>
+              </label>
+              <label
+                for="avatar"
+                class="cursor-pointer font-medium text-accent hover:underline"
+                >Загрузить фото</label
+              >
+              <input
+                data-avatar="input"
+                type="file"
+                name="avatar"
+                id="avatar"
+                class="w-0 h-0 opacity-0"
+                accept="image/png, image/jpeg, image/webp"
+                required
+              />
+            </div>
+            <label>
+              Ваше имя / псевдоним
+              <input
+                class="w-full mt-2.5 bg-bg-secondary rounded-[10px] px-[15px] py-2.5"
+                type="text"
+                name="name"
+                placeholder="Как вас называть?"
+                required
+              />
+            </label>
+            <label class="flex gap-[15px] items-center">
+              Категория проекта
+              <select
+                class="bg-bg-secondary rounded-[10px] px-[15px] py-2.5"
+                name="category"
+                required
+              >
+                <option value="music">Музыка</option>
+                <option value="post-production">Постпродакшн</option>
+                <option value="speech">Речь</option>
+                <option value="commercial">Коммерческий</option>
+              </select>
+            </label>
+            <label>
+              Сообщение
+              <textarea
+                class="w-full resize-none mt-2.5 bg-bg-secondary rounded-[10px] px-[15px] py-2.5"
+                name="text"
+                rows="6"
+                placeholder="Напишите о работе со мной"
+                required
+              ></textarea>
+            </label>
+            <button class="btn w-fit">Отправить</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="bg-bg-secondary">
@@ -61,21 +188,21 @@
             <li>
               <ul class="flex gap-2.5">
                 <li>
-                  <a href="#">
+                  <a href="https://web.telegram.org">
                     <svg class="fill-additional w-25px aspect-square">
                       <use href="/sprite.svg#telegram" />
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.tiktok.com/explore">
                     <svg class="fill-additional w-25px aspect-square">
                       <use href="/sprite.svg#tiktok" />
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.youtube.com/">
                     <svg
                       class="fill-additional w-25px aspect-square"
                       viewBox="0 0 24 24"
@@ -93,14 +220,32 @@
             </li>
           </ul>
         </div>
-        <div class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
           <span class="font-josefin text-4xl/[1]">draganov</span>
-        </div>
+        </a>
       </div>
     </footer>
+    <div
+      class="fixed inset-0 bg-black/50 z-2 flex items-center justify-center hidden"
+      data-modal
+    >
+      <div
+        class="w-full max-w-[505px] rounded-[35px] bg-bg-secondary p-25px flex flex-col gap-25px items-center"
+      >
+        <div class="flex flex-col gap-2.5">
+          <h2 class="text-2xl font-semibold">Спасибо за отзыв!</h2>
+          <p>
+            Мне важно ваше мнение. Отзыв будет опубликован на сайте после
+            проверки.
+          </p>
+        </div>
+        <button class="btn bg-accent" data-modal-close>Закрыть</button>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/pages/reviews.ts"></script>
   </body>
 </html>

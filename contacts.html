@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>services</title>
   </head>
-  <body class="bg-bg-primary text-white font-montserrat pt-17.5">
+  <body
+    class="bg-bg-primary text-white font-montserrat pt-17.5 min-h-screen flex flex-col"
+  >
     <header class="bg-bg-secondary fixed top-0 left-0 right-0 z-1">
       <div class="custom-container py-[15px] flex justify-between items-center">
         <a href="/" class="flex items-end gap-2.5">
@@ -15,7 +17,7 @@
           <span class="font-josefin text-4xl/[1]">draganov</span>
         </a>
         <nav>
-          <ul class="flex gap-25px text-additional">
+          <ul class="flex gap-25px">
             <li>
               <a href="about.html">Обо мне</a>
             </li>
@@ -35,16 +37,44 @@
         </nav>
       </div>
     </header>
-    <main>
-      <div
-        class="py-12.5 bg-[url('../assets/images/studio.jpg')] bg-center bg-cover overlay"
-      >
-        <h1 class="text-2xl text-accent font-semibold text-center relative">
-          Контакты
-        </h1>
-      </div>
+    <main class="flex-1">
       <section>
-        <div class="custom-container pt-12.5 pb-25"></div>
+        <div class="custom-container py-25 flex flex-col items-center gap-25px">
+          <h1 class="text-2xl font-semibold text-accent">Оставить заявку</h1>
+          <form class="flex flex-col gap-[15px] w-[410px]" data-form>
+            <label>
+              Ваше имя
+              <input
+                class="w-full mt-2.5 bg-bg-secondary rounded-[10px] px-[15px] py-2.5"
+                type="text"
+                name="name"
+                placeholder="Как к вам обращаться?"
+                required
+              />
+            </label>
+            <label>
+              Email
+              <input
+                class="w-full mt-2.5 bg-bg-secondary rounded-[10px] px-[15px] py-2.5"
+                type="email"
+                name="email"
+                placeholder="Ваш email для ответа"
+                required
+              />
+            </label>
+            <label>
+              Сообщение
+              <textarea
+                class="w-full resize-none mt-2.5 bg-bg-secondary rounded-[10px] px-[15px] py-2.5"
+                name="message"
+                rows="6"
+                placeholder="Опишите задачу или задайте вопрос"
+                required
+              ></textarea>
+            </label>
+            <button class="btn w-fit">Отправить</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="bg-bg-secondary">
@@ -61,21 +91,21 @@
             <li>
               <ul class="flex gap-2.5">
                 <li>
-                  <a href="#">
+                  <a href="https://web.telegram.org">
                     <svg class="fill-additional w-25px aspect-square">
                       <use href="/sprite.svg#telegram" />
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.tiktok.com/explore">
                     <svg class="fill-additional w-25px aspect-square">
                       <use href="/sprite.svg#tiktok" />
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.youtube.com/">
                     <svg
                       class="fill-additional w-25px aspect-square"
                       viewBox="0 0 24 24"
@@ -93,14 +123,34 @@
             </li>
           </ul>
         </div>
-        <div class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
           <span class="font-josefin text-4xl/[1]">draganov</span>
-        </div>
+        </a>
       </div>
     </footer>
+    <div
+      class="fixed inset-0 bg-black/50 z-2 flex items-center justify-center hidden"
+      data-modal
+    >
+      <div
+        class="w-full max-w-[505px] rounded-[35px] bg-bg-secondary p-25px flex flex-col gap-25px items-center"
+      >
+        <div class="flex flex-col gap-2.5">
+          <h2 class="text-2xl font-semibold">
+            Спасибо! Ваша заявка отправлена.
+          </h2>
+          <p>
+            Я свяжусь с вами в ближайшее время, чтобы уточнить детали и обсудить
+            задачу.
+          </p>
+        </div>
+        <button class="btn bg-accent" data-modal-close>Закрыть</button>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/pages/contacts.ts"></script>
   </body>
 </html>

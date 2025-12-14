@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>services</title>
   </head>
-  <body class="bg-bg-primary text-white font-montserrat pt-17.5">
+  <body
+    class="bg-bg-primary text-white font-montserrat pt-17.5 min-h-screen flex flex-col"
+  >
     <header class="bg-bg-secondary fixed top-0 left-0 right-0 z-1">
       <div class="custom-container py-[15px] flex justify-between items-center">
         <a href="/" class="flex items-end gap-2.5">
@@ -15,7 +17,7 @@
           <span class="font-josefin text-4xl/[1]">draganov</span>
         </a>
         <nav>
-          <ul class="flex gap-25px text-additional">
+          <ul class="flex gap-25px">
             <li>
               <a href="about.html">Обо мне</a>
             </li>
@@ -35,7 +37,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="flex-1">
       <div
         class="py-12.5 bg-[url('../assets/images/studio.jpg')] bg-center bg-cover overlay"
       >
@@ -144,21 +146,21 @@
             <li>
               <ul class="flex gap-2.5">
                 <li>
-                  <a href="#">
+                  <a href="https://web.telegram.org">
                     <svg class="fill-additional w-25px aspect-square">
                       <use href="/sprite.svg#telegram" />
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.tiktok.com/explore">
                     <svg class="fill-additional w-25px aspect-square">
                       <use href="/sprite.svg#tiktok" />
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.youtube.com/">
                     <svg
                       class="fill-additional w-25px aspect-square"
                       viewBox="0 0 24 24"
@@ -176,12 +178,12 @@
             </li>
           </ul>
         </div>
-        <div class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
           <span class="font-josefin text-4xl/[1]">draganov</span>
-        </div>
+        </a>
       </div>
     </footer>
     <script type="module" src="/src/main.ts"></script>
