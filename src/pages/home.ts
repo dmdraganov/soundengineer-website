@@ -1,9 +1,12 @@
-import type { Benefit, Project } from '../types/types';
+import type { Benefit } from '../types/types';
 import benefits from '../data/benefits.json';
-import { render, renderReviews, renderServices } from '../utils/renderUtils';
+import {
+  render,
+  renderProjects,
+  renderReviews,
+  renderServices,
+} from '../utils/renderUtils';
 import BenefitCard from '../components/BenefitCard';
-import ProjectCard from '../components/ProjectCard';
-import projects from '../data/projects.json';
 import { initializeModal } from '../utils/modalUtils';
 
 initializeModal();
@@ -27,16 +30,8 @@ if (!reviewContainer) throw new Error('Review container not found');
 if (!projectContainer) throw new Error('Project container not found');
 
 const benefitList: Benefit[] = benefits as Benefit[];
-const projectList: Project[] = projects as Project[];
 
 renderServices(serviceContainer, (elem) => !!elem.isPopular);
 render<Benefit>(benefitContainer, benefitList, BenefitCard);
 renderReviews(reviewContainer, (elem) => !!elem.isPopular);
-
-const renderProjects = async (
-  container: HTMLDivElement,
-  dataList: Project[]
-) => {
-  container.append(...(await Promise.all(dataList.map(ProjectCard))));
-};
-renderProjects(projectContainer, projectList);
+renderProjects(projectContainer, (elem) => !!elem.isPopular);

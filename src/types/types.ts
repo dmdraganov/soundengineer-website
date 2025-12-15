@@ -31,7 +31,9 @@ export interface Benefit {
 
 export interface Project {
   cover: string;
+  audio: string;
   clientName: string;
   title: string;
+  category: Category;
   isPopular?: boolean;
 }

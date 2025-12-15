@@ -11,14 +11,24 @@
   >
     <header class="bg-bg-secondary fixed top-0 left-0 right-0 z-1">
       <div class="custom-container py-[15px] flex justify-between items-center">
-        <a href="/" class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5 z-20">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
           <span class="font-josefin text-4xl/[1]">draganov</span>
         </a>
-        <nav>
-          <ul class="flex gap-25px">
+        <button
+          data-burger-button
+          class="z-2 relative h-25px w-7.5 cursor-pointer md:hidden"
+        >
+          <span class="burger-line top-0"></span>
+          <span class="burger-line top-1/2 -translate-y-1/2"></span>
+          <span class="burger-line bottom-0"></span>
+        </button>
+        <nav data-nav-menu class="nav-menu closed">
+          <ul
+            class="flex flex-col gap-10 text-center text-2xl h-full justify-center md:flex-row md:gap-25px md:text-base md:h-auto"
+          >
             <li>
               <a href="about.html">Обо мне</a>
             </li>
@@ -66,14 +76,14 @@
             </a>
           </div>
           <svg
-            class="fill-additional h-12.5 aspect-square absolute bottom-10 right-1/2 translate-x-1/2 opacity-50"
+            class="fill-additional h-12.5 aspect-square absolute bottom-10 right-1/2 translate-x-1/2 opacity-50 animate-bounce"
           >
             <use href="/sprite.svg#scroll" />
           </svg>
         </div>
       </section>
       <section>
-        <div class="custom-container flex flex-col gap-25px pt-25 pb-12.5">
+        <div class="custom-container pt-25 pb-12.5">
           <div class="flex gap-2.5 font-semibold items-stretch">
             <h2 class="text-2xl">Обо мне</h2>
             <div>
@@ -82,20 +92,21 @@
               </svg>
             </div>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta,
-            libero tincidunt consequat convallis, dui est rhoncus lacus, vel
-            viverra sem felis id massa. Fusce dictum sit amet sem sit amet
-            pretium. Phasellus hendrerit molestie pulvinar. Nulla posuere mattis
-            velit eu varius. Vestibulum eu turpis lobortis, porta massa nec,
-            facilisis diam. Duis vitae cursus eros. Ut nisl eros, blandit nec
-            porttitor eget, venenatis quis ligula. Pellentesque eu ligula risus.
-            Pellentesque ut efficitur ipsum, sed faucibus libero. Integer
-            tincidunt tincidunt ante quis porta. Pellentesque habitant morbi
-            tristique senectus et netus et malesuada fames ac turpis egestas. Ut
-            erat leo, dictum efficitur gravida non, dignissim eget ex.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
+          <div class="flex flex-col gap-[15px] mb-10 mt-25px">
+            <p>
+              Дмитрий Драганов — современный мультидисциплинарный звукорежиссёр.
+              Работаю с музыкой, речью и звуком для медиа, брендов и цифровых
+              продуктов: аранжировки, сведение и мастеринг, постпродакшн,
+              подкасты, реклама, саунд-дизайн.
+            </p>
+            <p>
+              Я делаю звук, который не просто хорошо звучит, а выполняет задачу
+              — усиливает смысл, упрощает восприятие и работает в конкретной
+              среде: от стримингов и соцсетей до презентаций и интерфейсов.
+              Внимателен к деталям, трендам и контексту. Работаю спокойно,
+              быстро и чисто. Звук для меня — часть интерфейса мира.
+            </p>
+          </div>
           <a href="/about.html" class="link">
             Подробнее
             <svg class="arrow -rotate-90">
@@ -115,12 +126,15 @@
               </svg>
             </a>
           </div>
-          <div class="grid gap-25px grid-cols-3" data-service-container></div>
+          <div
+            class="m-auto w-fit grid gap-25px grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+            data-service-container
+          ></div>
         </div>
       </section>
       <section>
         <div class="custom-container py-25">
-          <h2 class="text-2xl font-semibold text-center mb-25px">
+          <h2 class="text-2xl font-semibold text-center mb-12.5">
             Преимущества
           </h2>
           <div class="flex gap-25px flex-wrap" data-benefit-container></div>
@@ -137,7 +151,10 @@
               </svg>
             </a>
           </div>
-          <div class="grid grid-cols-4 gap-25px" data-project-container></div>
+          <div
+            class="grid gap-25px grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            data-project-container
+          ></div>
         </div>
       </section>
       <section>
@@ -149,10 +166,15 @@
               src="/disk.jpeg"
               alt="CD-диск"
             />
-            <div
-              class="flex-[1_1_400px] flex flex-col gap-25px"
-              data-review-container
-            ></div>
+            <div class="flex-[1_1_400px] flex flex-col gap-25px items-center">
+              <div class="flex flex-col gap-25px" data-review-container></div>
+              <a class="link" href="/reviews.html">
+                Все отзывы
+                <svg class="arrow -rotate-90">
+                  <use href="/sprite.svg#arrow" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -161,7 +183,7 @@
           class="custom-container pt-12.5 pb-25 flex flex-col gap-25px items-center"
         >
           <h2 class="text-2xl font-semibold text-accent">Оставить заявку</h2>
-          <form class="flex flex-col gap-[15px] w-[410px]" data-form>
+          <form class="flex flex-col gap-[15px] w-[410px] max-w-full" data-form>
             <label>
               Ваше имя
               <input
@@ -198,7 +220,9 @@
       </section>
     </main>
     <footer class="bg-bg-secondary">
-      <div class="custom-container py-7.5 flex justify-between items-center">
+      <div
+        class="custom-container py-7.5 flex flex-wrap gap-25px justify-center items-center sm:justify-between"
+      >
         <div class="flex gap-25px items-center">
           <h2 class="text-2xl text-additional">Контакты</h2>
           <ul class="flex flex-col gap-2.5">
@@ -243,7 +267,7 @@
             </li>
           </ul>
         </div>
-        <a href="/" class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5 hover:opacity-100">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>

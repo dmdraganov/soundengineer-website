@@ -11,7 +11,7 @@ const ReviewElement = ({ name, text }: Review) => {
     />
     <div>
       <h3 class="font-semibold mb-2.5">${name}</h3>
-      <p class="mb-[15px]">
+      <p class="mt-2.5">
         ${text}
       </p>
     </div>

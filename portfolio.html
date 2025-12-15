@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <title>services</title>
   </head>
   <body
@@ -10,14 +11,24 @@
   >
     <header class="bg-bg-secondary fixed top-0 left-0 right-0 z-1">
       <div class="custom-container py-[15px] flex justify-between items-center">
-        <a href="/" class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5 z-20">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
           <span class="font-josefin text-4xl/[1]">draganov</span>
         </a>
-        <nav>
-          <ul class="flex gap-25px">
+        <button
+          data-burger-button
+          class="z-2 relative h-25px w-7.5 cursor-pointer md:hidden"
+        >
+          <span class="burger-line top-0"></span>
+          <span class="burger-line top-1/2 -translate-y-1/2"></span>
+          <span class="burger-line bottom-0"></span>
+        </button>
+        <nav data-nav-menu class="nav-menu closed">
+          <ul
+            class="flex flex-col gap-10 text-center text-2xl h-full justify-center md:flex-row md:gap-25px md:text-base md:h-auto"
+          >
             <li>
               <a href="about.html">Обо мне</a>
             </li>
@@ -38,102 +49,74 @@
       </div>
     </header>
     <main class="flex-1">
-      <div
-        class="py-12.5 bg-[url('../assets/images/studio.jpg')] bg-center bg-cover overlay"
-      >
+      <div class="py-12.5 bg-(image:--img-studio) bg-center bg-cover overlay">
         <h1 class="text-2xl text-accent font-semibold text-center relative">
           Портфолио
         </h1>
       </div>
-      <section>
-        <div class="custom-container pt-12.5 pb-25 flex flex-col gap-25px">
-          <div class="flex gap-2.5 font-semibold items-stretch">
-            <h2 class="text-2xl">Музыка</h2>
-            <div>
-              <svg class="h-full aspect-square fill-current">
+      <div class="flex flex-col gap-25">
+        <section>
+          <div class="custom-container pt-12.5">
+            <div class="flex gap-2.5 font-semibold items-center mb-25px">
+              <h2 class="text-2xl">Музыка</h2>
+              <svg class="h-25px w-25px fill-current">
                 <use href="/sprite.svg#melody" />
               </svg>
             </div>
+            <div
+              class="grid gap-25px grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+              data-project-container="music"
+            ></div>
           </div>
-          <div class="grid grid-cols-4 gap-25px">
-            <div class="text-center">
-              <div
-                class="w-full aspect-square bg-(image:--img-cover1) bg-cover bg-center]"
-              >
-                <!-- music player -->
-              </div>
-              <h3 class="my-2.5">Название</h3>
-            </div>
-            <div class="text-center">
-              <div
-                class="w-full aspect-square bg-(image:--img-cover1) bg-cover bg-center]"
-              >
-                <!-- music player -->
-              </div>
-              <h3 class="my-2.5">Название</h3>
-            </div>
-            <div class="text-center">
-              <div
-                class="w-full aspect-square bg-(image:--img-cover1) bg-cover bg-center]"
-              >
-                <!-- music player -->
-              </div>
-              <h3 class="my-2.5">Название</h3>
-            </div>
-            <div class="text-center">
-              <div
-                class="w-full aspect-square bg-(image:--img-cover1) bg-cover bg-center]"
-              >
-                <!-- music player -->
-              </div>
-              <h3 class="my-2.5">Название</h3>
-            </div>
-            <div class="text-center">
-              <div
-                class="w-full aspect-square bg-(image:--img-cover1) bg-cover bg-center]"
-              >
-                <!-- music player -->
-              </div>
-              <h3 class="my-2.5">Название</h3>
-            </div>
-            <div class="text-center">
-              <div
-                class="w-full aspect-square bg-(image:--img-cover1) bg-cover bg-center]"
-              >
-                <!-- music player -->
-              </div>
-              <h3 class="my-2.5">Название</h3>
-            </div>
-          </div>
-          <div class="flex gap-2.5 font-semibold items-stretch">
-            <h2 class="text-2xl">Постпродакшн и саунд-дизайн</h2>
-            <div>
-              <svg class="h-full aspect-square fill-current">
+        </section>
+        <section>
+          <div class="custom-container">
+            <div class="flex gap-2.5 font-semibold items-center mb-25px">
+              <h2 class="text-2xl">Постпродакшн и саунд-дизайн</h2>
+              <svg class="h-25px w-25px fill-current">
                 <use href="/sprite.svg#fader" />
               </svg>
             </div>
+            <div
+              class="grid gap-25px grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+              data-project-container="postProduction"
+            ></div>
           </div>
-          <div class="flex gap-2.5 font-semibold items-stretch">
-            <h2 class="text-2xl">Подкасты и речь</h2>
-            <div>
-              <svg class="h-full aspect-square fill-current">
+        </section>
+        <section>
+          <div class="custom-container">
+            <div class="flex gap-2.5 font-semibold items-center mb-25px">
+              <h2 class="text-2xl">Подкасты и речь</h2>
+              <svg class="h-25px w-25px fill-current">
                 <use href="/sprite.svg#mic" />
               </svg>
             </div>
+            <div
+              class="grid gap-25px grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+              data-project-container="speech"
+            ></div>
           </div>
-          <div class="flex gap-2.5 font-semibold items-stretch">
-            <h2 class="text-2xl">Коммерческие аудиопроекты</h2>
-            <div>
-              <svg class="h-full aspect-square fill-current">
+        </section>
+        <section>
+          <div class="custom-container pb-25">
+            <div class="flex gap-2.5 font-semibold items-center mb-25px">
+              <h2 class="text-2xl">Коммерческие аудиопроекты</h2>
+              <svg class="h-25px w-25px fill-current">
                 <use href="/sprite.svg#megaphone" />
               </svg>
             </div>
+            <div
+              class="grid gap-25px grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+              data-project-container="commercial"
+            ></div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
     <footer class="bg-bg-secondary">
-      <div class="custom-container py-7.5 flex justify-between items-center">
+      <div
+        class="custom-container py-7.5 flex flex-wrap gap-25px justify-center items-center sm:justify-between"
+      >
         <div class="flex gap-25px items-center">
           <h2 class="text-2xl text-additional">Контакты</h2>
           <ul class="flex flex-col gap-2.5">
@@ -178,7 +161,7 @@
             </li>
           </ul>
         </div>
-        <a href="/" class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5 hover:opacity-100">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
@@ -187,5 +170,6 @@
       </div>
     </footer>
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/pages/portfolio.ts"></script>
   </body>
 </html>

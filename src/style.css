@@ -21,12 +21,21 @@
   --img-studio: url('./assets/images/studio.jpg');
 }
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+    overflow-y: scroll;
+  }
+  a {
+    @apply transition hover:opacity-70;
+  }
+}
 @layer components {
   .arrow {
     @apply h-[13px] w-[13px];
   }
   .btn {
-    @apply bg-accent rounded-[10px] text-bg-primary px-[15px] py-2.5 font-medium hover:cursor-pointer;
+    @apply bg-accent rounded-[10px] text-bg-primary px-[15px] py-2.5 font-medium cursor-pointer transition hover:opacity-70 active:bg-additional;
   }
   .link {
     @apply text-accent flex gap-2.5 items-center font-medium;
@@ -47,12 +56,45 @@
     }
   }
   .tab {
-    &:checked + label,
     & + label {
-      @apply hover:cursor-pointer;
+      @apply cursor-pointer transition hover:opacity-70;
     }
     &:checked + label {
-      @apply text-accent hover:transition-colors hover:duration-100;
+      @apply text-accent;
+    }
+  }
+  .burger-line {
+    @apply absolute block w-full h-0.5 bg-white left-0;
+  }
+  .nav-menu {
+    @apply -translate-y-full fixed inset-0 bg-bg-secondary  
+           transition-transform duration-300
+           flex justify-center items-center
+           md:static md:w-auto md:translate-y-0 md:bg-transparent 
+           md:transition-none
+           md:flex;
+  }
+  .player-progress {
+    @apply appearance-none h-1 cursor-pointer md:opacity-0;
+
+    &::-webkit-slider-runnable-track {
+      @apply bg-white/50 h-0.5 rounded-full;
+    }
+    &::-moz-range-progress {
+      @apply bg-white/50 h-0.5 rounded-full;
+    }
+
+    &::-webkit-slider-thumb {
+      @apply appearance-none w-2.5 h-2.5 rounded-full bg-white -mt-1;
+    }
+    &::-moz-range-thumb {
+      @apply appearance-none w-2.5 h-2.5 rounded-full bg-white -mt-1;
+    }
+  }
+  .player {
+    @apply hover:bg-black/50;
+    &:hover .player-progress {
+      @apply opacity-100;
     }
   }
 }

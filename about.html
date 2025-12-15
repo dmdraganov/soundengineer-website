@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
     <title>services</title>
   </head>
   <body
@@ -10,14 +12,24 @@
   >
     <header class="bg-bg-secondary fixed top-0 left-0 right-0 z-1">
       <div class="custom-container py-[15px] flex justify-between items-center">
-        <a href="/" class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5 z-20">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
           <span class="font-josefin text-4xl/[1]">draganov</span>
         </a>
-        <nav>
-          <ul class="flex gap-25px">
+        <button
+          data-burger-button
+          class="z-2 relative h-25px w-7.5 cursor-pointer md:hidden"
+        >
+          <span class="burger-line top-0"></span>
+          <span class="burger-line top-1/2 -translate-y-1/2"></span>
+          <span class="burger-line bottom-0"></span>
+        </button>
+        <nav data-nav-menu class="nav-menu closed">
+          <ul
+            class="flex flex-col gap-10 text-center text-2xl h-full justify-center md:flex-row md:gap-25px md:text-base md:h-auto"
+          >
             <li>
               <a href="about.html">Обо мне</a>
             </li>
@@ -38,24 +50,22 @@
       </div>
     </header>
     <main class="flex-1">
-      <div
-        class="py-12.5 bg-[url('../assets/images/studio.jpg')] bg-center bg-cover overlay"
-      >
+      <div class="py-12.5 bg-(image:--img-studio) bg-center bg-cover overlay">
         <h1 class="text-2xl text-accent font-semibold text-center relative">
           Обо мне
         </h1>
       </div>
       <section>
         <div class="custom-container pt-12.5 pb-25 flex flex-col gap-25px">
-          <div class="flex gap-25px items-start">
-            <div class="flex-1 flex flex-col gap-[15px]">
+          <div class="flex flex-wrap gap-25px">
+            <div class="flex-1 basis-6/12 flex flex-col gap-[15px]">
               <p>
-                Меня зовут Дима Драганов, я мультидисциплинарный звукорежиссёр и
-                саунд-дизайнер. Работаю на пересечении музыкального продакшна,
-                постпродакшна и аудио для медиапроектов. Мне 27 лет, и за
-                последние годы я успел поработать с артистами, брендами,
-                подкастами, видеостудиями и digital-проектами, помогая им
-                находить свой уникальный звуковой язык.
+                Меня зовут Дмитрий Драганов, я мультидисциплинарный
+                звукорежиссёр и саунд-дизайнер. Работаю на пересечении
+                музыкального продакшна, постпродакшна и аудио для медиапроектов.
+                Мне 27 лет, и за последние годы я успел поработать с артистами,
+                брендами, подкастами, видеостудиями и digital-проектами, помогая
+                им находить свой уникальный звуковой язык.
               </p>
               <h2 class="text-2xl font-semibold">Как всё началось</h2>
               <p>
@@ -82,18 +92,18 @@
               </p>
             </div>
             <img
-              class="aspect-3/4 object-cover min-w-0 w-100 object-center"
+              class="flex-1 object-cover w-112.5 object-center"
               src="/photo1.jpg"
               alt="Я в студии приложил наушник к уху"
             />
           </div>
-          <div class="flex gap-25px">
+          <div class="flex flex-wrap-reverse gap-25px">
             <img
-              class="w-112.5 object-cover h-full"
+              class="flex-1 object-cover w-112.5 object-center"
               src="/photo2.jpg"
               alt="Я в студии, повернут к камере"
             />
-            <div class="flex-1 flex flex-col gap-[15px]">
+            <div class="flex-1 basis-6/12 flex flex-col gap-[15px]">
               <h2 class="text-2xl font-semibold text-accent">
                 Что я делаю сейчас
               </h2>
@@ -174,7 +184,9 @@
       </section>
     </main>
     <footer class="bg-bg-secondary">
-      <div class="custom-container py-7.5 flex justify-between items-center">
+      <div
+        class="custom-container py-7.5 flex flex-wrap gap-25px justify-center items-center sm:justify-between"
+      >
         <div class="flex gap-25px items-center">
           <h2 class="text-2xl text-additional">Контакты</h2>
           <ul class="flex flex-col gap-2.5">
@@ -219,7 +231,7 @@
             </li>
           </ul>
         </div>
-        <a href="/" class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5 hover:opacity-100">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>

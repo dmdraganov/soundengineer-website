@@ -10,7 +10,7 @@ const ServiceCard = ({
 }: Service) => {
   const serviceElement = document.createElement('div');
   serviceElement.className =
-    'flex-[1_1_360px] max-w-125 flex flex-col justify-between gap-[15px] bg-bg-secondary rounded-[35px] p-25px ';
+    'flex-[1_1_360px] flex flex-col justify-between gap-[15px] bg-bg-secondary rounded-[35px] p-25px ';
   serviceElement.innerHTML = `
     <div class="flex flex-col gap-[15px]">
       <div class="flex gap-[15px]">
@@ -26,7 +26,7 @@ const ServiceCard = ({
       <p>
         ${description}
       </p>
-      <button data-spoiler="button" class="font-semibold flex gap-2.5 items-center">
+      <button class="w-fit font-semibold flex gap-2.5 items-center cursor-pointer" data-spoiler="button">
         Подробнее
         <svg class="arrow fill-white transition-transform" data-spoiler="button-arrow">
           <use href="/sprite.svg#arrow" />
@@ -48,19 +48,21 @@ const ServiceCard = ({
     `;
 
   const detailsButton = serviceElement.querySelector('[data-spoiler="button"]');
-  if (!detailsButton) return console.error('Details button not found');
-  const arrow = detailsButton.querySelector('.arrow');
-  const detailsList = serviceElement.querySelector<HTMLElement>(
-    '[data-spoiler="list"]'
-  );
+  if (detailsButton) {
+    const arrow = detailsButton.querySelector('.arrow');
+    const detailsList = serviceElement.querySelector<HTMLElement>(
+      '[data-spoiler="list"]'
+    );
 
-  if (!detailsList || !arrow) return console.error('Arrow or list not found');
-  detailsButton.addEventListener('click', () => {
-    arrow.classList.toggle('rotate-180');
-    detailsList.style.maxHeight = detailsList.style.maxHeight
-      ? ''
-      : `${detailsList.scrollHeight}px`;
-  });
+    if (detailsList && arrow) {
+      detailsButton.addEventListener('click', () => {
+        arrow.classList.toggle('rotate-180');
+        detailsList.style.maxHeight = detailsList.style.maxHeight
+          ? ''
+          : `${detailsList.scrollHeight}px`;
+      });
+    }
+  }
 
   return serviceElement;
 };

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <title>services</title>
   </head>
   <body
@@ -10,14 +11,24 @@
   >
     <header class="bg-bg-secondary fixed top-0 left-0 right-0 z-1">
       <div class="custom-container py-[15px] flex justify-between items-center">
-        <a href="/" class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5 z-20">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
           <span class="font-josefin text-4xl/[1]">draganov</span>
         </a>
-        <nav>
-          <ul class="flex gap-25px">
+        <button
+          data-burger-button
+          class="z-2 relative h-25px w-7.5 cursor-pointer md:hidden"
+        >
+          <span class="burger-line top-0"></span>
+          <span class="burger-line top-1/2 -translate-y-1/2"></span>
+          <span class="burger-line bottom-0"></span>
+        </button>
+        <nav data-nav-menu class="nav-menu closed">
+          <ul
+            class="flex flex-col gap-10 text-center text-2xl h-full justify-center md:flex-row md:gap-25px md:text-base md:h-auto"
+          >
             <li>
               <a href="about.html">Обо мне</a>
             </li>
@@ -46,7 +57,7 @@
       <section>
         <div class="custom-container pt-12.5 pb-25">
           <fieldset
-            class="flex gap-25px justify-center mb-25px"
+            class="flex flex-wrap gap-25px justify-center mb-25px"
             name="category"
             data-tabs-container
           >
@@ -84,12 +95,17 @@
             />
             <label for="category-commercial"> Коммерческие проекты </label>
           </fieldset>
-          <div class="grid grid-cols-3 gap-25px" data-service-container></div>
+          <div
+            class="m-auto w-fit grid gap-25px grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+            data-service-container
+          ></div>
         </div>
       </section>
     </main>
     <footer class="bg-bg-secondary">
-      <div class="custom-container py-7.5 flex justify-between items-center">
+      <div
+        class="custom-container py-7.5 flex flex-wrap gap-25px justify-center items-center sm:justify-between"
+      >
         <div class="flex gap-25px items-center">
           <h2 class="text-2xl text-additional">Контакты</h2>
           <ul class="flex flex-col gap-2.5">
@@ -134,7 +150,7 @@
             </li>
           </ul>
         </div>
-        <a href="/" class="flex items-end gap-2.5">
+        <a href="/" class="flex items-end gap-2.5 hover:opacity-100">
           <svg class="h-10 w-10 fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
