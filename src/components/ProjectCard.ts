@@ -42,7 +42,7 @@ const ProjectCard = async ({ cover, audio, clientName, title }: Project) => {
           </svg>
         </button>
         <div class="player-controls flex flex-col items-end gap-[5px] absolute bottom-2.5 inset-x-[15px]">
-          <input class="player-volume absolute bottom-20 translate-x-1/2 right-[9px] w-24 h-2 transform -rotate-90 hidden" type="range" min="0" max="1" step="0.1" value="1" data-player-volume="bar">
+          <input class="player-volume absolute bottom-21.5 translate-x-1/2 right-[9px] w-24 h-2 transform -rotate-90 hidden" type="range" min="0" max="1" step="0.1" value="1" data-player-volume="bar">
           <div class="w-full flex items-center justify-between">
             <span class="text-[12px]" data-player-time>00:00</span>
             <div class="flex items-center gap-[5px]">

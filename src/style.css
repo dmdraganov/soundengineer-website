@@ -18,7 +18,10 @@
   --img-disk: url('./assets/images/disk.jpeg');
   --img-photo1: url('./assets/images/photo1.jpg');
   --img-photo2: url('./assets/images/photo2.jpg');
-  --img-studio: url('./assets/images/studio.jpg');
+  --img-studio-reviews: url('./assets/images/studio.jpg');
+  --img-studio-about: url('./assets/images/studio-about.jpg');
+  --img-studio-services: url('./assets/images/studio-services.jpg');
+  --img-studio-portfolio: url('./assets/images/studio-portfolio.jpg');
 }
 
 @layer base {
@@ -86,7 +89,7 @@
            md:flex;
   }
   .player-progress {
-    @apply appearance-none h-1 cursor-pointer;
+    @apply appearance-none h-2.5 cursor-pointer;
 
     &::-webkit-slider-runnable-track {
       @apply bg-white/50 h-0.5 rounded-full;
