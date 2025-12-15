@@ -7,8 +7,10 @@ export const initializeBurgerMenu = () => {
   if (!burgerButton || !navMenu)
     return console.error('Burger button or nav menu not found');
 
-  const toggleMenu = (close?: boolean) =>
+  const toggleMenu = (close?: boolean) => {
     navMenu.classList.toggle('translate-y-0', close ? false : undefined);
+    burgerButton.classList.toggle('is-opened');
+  };
 
   burgerButton.addEventListener('click', () => {
     toggleMenu();

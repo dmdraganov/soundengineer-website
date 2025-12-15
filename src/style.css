@@ -64,7 +64,18 @@
     }
   }
   .burger-line {
-    @apply absolute block w-full h-0.5 bg-white left-0;
+    @apply absolute block w-full h-0.5 bg-white left-0 transition-all;
+  }
+  [data-burger-button].is-opened {
+    .burger-line:nth-child(1) {
+      @apply top-1/2! -translate-y-1/2 rotate-45;
+    }
+    .burger-line:nth-child(2) {
+      @apply opacity-0;
+    }
+    .burger-line:nth-child(3) {
+      @apply top-1/2 -translate-y-1/2 -rotate-45;
+    }
   }
   .nav-menu {
     @apply -translate-y-full fixed inset-0 bg-bg-secondary  
@@ -75,7 +86,7 @@
            md:flex;
   }
   .player-progress {
-    @apply appearance-none h-1 cursor-pointer md:opacity-0;
+    @apply appearance-none h-1 cursor-pointer;
 
     &::-webkit-slider-runnable-track {
       @apply bg-white/50 h-0.5 rounded-full;
@@ -91,9 +102,28 @@
       @apply appearance-none w-2.5 h-2.5 rounded-full bg-white -mt-1;
     }
   }
+  .player-volume {
+    @apply appearance-none cursor-pointer;
+
+    &::-webkit-slider-runnable-track {
+      @apply bg-white/50 h-2.5 overflow-visible;
+    }
+    &::-moz-range-progress {
+      @apply bg-white/50 h-2.5;
+    }
+    &::-webkit-slider-thumb {
+      @apply appearance-none w-1 h-full bg-white;
+    }
+    &::-moz-range-thumb {
+      @apply appearance-none w-1 h-full bg-white;
+    }
+  }
+  .player-controls {
+    @apply md:opacity-0;
+  }
   .player {
     @apply hover:bg-black/50;
-    &:hover .player-progress {
+    &:hover .player-controls {
       @apply opacity-100;
     }
   }
