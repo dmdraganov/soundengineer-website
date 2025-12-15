@@ -12,10 +12,10 @@
     <header class="bg-bg-secondary fixed top-0 left-0 right-0 z-1">
       <div class="custom-container py-[15px] flex justify-between items-center">
         <a href="/" class="flex items-end gap-2.5 z-20">
-          <svg class="h-10 w-10 fill-current">
+          <svg class="h-[35px] w-[35px] fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
-          <span class="font-josefin text-4xl/[1]">draganov</span>
+          <span class="font-josefin text-[32px]/[1]">draganov</span>
         </a>
         <button
           data-burger-button
@@ -27,7 +27,7 @@
         </button>
         <nav data-nav-menu class="nav-menu closed">
           <ul
-            class="flex flex-col gap-10 text-center text-2xl h-full justify-center md:flex-row md:gap-25px md:text-base md:h-auto"
+            class="flex flex-col gap-10 text-center text-2xl h-full justify-center md:flex-row md:gap-5 md:text-base md:h-auto"
           >
             <li>
               <a href="about.html">Обо мне</a>
@@ -51,7 +51,7 @@
     <main class="flex-1">
       <section class="relative">
         <div
-          class="absolute inset-x-0 top-17.5 bottom-0 bg-(image:--img-hero) bg-position-[75%_center] bg-cover"
+          class="absolute inset-x-0 top-[65px] bottom-0 bg-(image:--img-hero) bg-position-[75%_center] bg-cover"
         >
           <div
             class="size-full bg-radial-[circle_at_85%_50%] from-transparent to-55% to-black opacity-40"
@@ -75,14 +75,17 @@
               </svg>
             </a>
           </div>
-          <svg
-            class="fill-additional h-12.5 aspect-square absolute bottom-10 right-1/2 translate-x-1/2 opacity-50 animate-bounce"
+          <a
+            href="#about"
+            class="absolute bottom-10 right-1/2 translate-x-1/2 opacity-70 animate-bounce hover:opacity-100 cursor-pointer"
           >
-            <use href="/sprite.svg#scroll" />
-          </svg>
+            <svg class="fill-additional h-12.5 w-12.5">
+              <use href="/sprite.svg#scroll" />
+            </svg>
+          </a>
         </div>
       </section>
-      <section>
+      <section id="about" class="scroll-m-[65px]">
         <div class="custom-container pt-25 pb-12.5">
           <div class="flex gap-2.5 font-semibold items-stretch">
             <h2 class="text-2xl">Обо мне</h2>
@@ -140,7 +143,7 @@
           <div class="flex gap-25px flex-wrap" data-benefit-container></div>
         </div>
       </section>
-      <section id="portfolio" class="scroll-m-17.5">
+      <section id="portfolio" class="scroll-m-[65px]">
         <div class="custom-container py-12.5">
           <div class="flex justify-between items-end mb-25px">
             <h2 class="text-2xl font-semibold">Портфолио</h2>
@@ -160,7 +163,9 @@
       <section>
         <div class="custom-container flex flex-col gap-25px items-center py-25">
           <h2 class="text-2xl font-semibold text-accent">Отзывы</h2>
-          <div class="w-4/5 flex gap-25px items-end flex-wrap-reverse">
+          <div
+            class="w-4/5 flex gap-25px items-end flex-wrap-reverse justify-center"
+          >
             <img
               class="aspect-square max-w-[470px] min-w-3/7 flex-1 rounded-[20px] object-cover"
               src="/disk.jpeg"
@@ -223,7 +228,7 @@
       <div
         class="custom-container py-7.5 flex flex-wrap gap-25px justify-center items-center sm:justify-between"
       >
-        <div class="flex gap-25px items-center">
+        <div class="flex gap-25px items-center flex-wrap justify-center">
           <h2 class="text-2xl text-additional">Контакты</h2>
           <ul class="flex flex-col gap-2.5">
             <li>
@@ -270,10 +275,10 @@
           </ul>
         </div>
         <a href="/" class="flex items-end gap-2.5 hover:opacity-100">
-          <svg class="h-10 w-10 fill-current">
+          <svg class="h-[35px] w-[35px] fill-current">
             <use href="/sprite.svg#wave" />
           </svg>
-          <span class="font-josefin text-4xl/[1]">draganov</span>
+          <span class="font-josefin text-[32px]/[1]">draganov</span>
         </a>
       </div>
     </footer>

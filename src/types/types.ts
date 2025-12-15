@@ -17,6 +17,7 @@ export interface Service {
 }
 
 export interface Review {
+  avatar: string;
   name: string;
   text: string;
   category: Category;
