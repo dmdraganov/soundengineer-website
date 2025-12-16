@@ -82,11 +82,11 @@
   }
   .nav-menu {
     @apply -translate-y-full fixed inset-0 bg-bg-secondary  
-           transition-transform duration-300
-           flex justify-center items-center
-           md:static md:w-auto md:translate-y-0 md:bg-transparent 
-           md:transition-none
-           md:flex;
+            transition-transform duration-300
+            flex justify-center items-center
+            md:static md:w-auto md:translate-y-0 md:bg-transparent 
+            md:transition-none
+            md:flex;
   }
   .player-progress {
     @apply appearance-none h-2.5 cursor-pointer;
@@ -112,7 +112,7 @@
       @apply bg-white/50 h-2.5 overflow-visible;
     }
     &::-moz-range-progress {
-      @apply bg-white/50 h-2.5;
+      @apply bg-white/50 h-2.5 overflow-visible;
     }
     &::-webkit-slider-thumb {
       @apply appearance-none w-1 h-full bg-white;
