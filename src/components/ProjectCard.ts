@@ -10,7 +10,7 @@ const audioArray: HTMLAudioElement[] = [];
 const setIcon = (button: HTMLButtonElement, icon: 'play' | 'pause') => {
   button.innerHTML = `
     <svg class="fill-current h-10 w-10">
-      <use href="/sprite.svg#${icon}" />
+      <use href="./sprite.svg#${icon}" />
     </svg>
   `;
 };
@@ -38,7 +38,7 @@ const ProjectCard = async ({ cover, audio, clientName, title }: Project) => {
         <audio src="${audioUrl}"></audio>
         <button data-player-button class="absolute top-1/2 left-1/2 -translate-1/2">
           <svg class="fill-current h-10 w-10">
-            <use href="/sprite.svg#play"/>
+            <use href="./sprite.svg#play"/>
           </svg>
         </button>
         <div class="player-controls flex flex-col items-end gap-[5px] absolute bottom-2.5 inset-x-[15px]">

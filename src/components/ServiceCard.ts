@@ -20,7 +20,7 @@ const ServiceCard = ({
         <svg class="${
           iconId === 'drum' ? 'fill-none' : 'fill-white'
         } h-7.5 aspect-square">
-          <use href="/sprite.svg#${iconId}" />
+          <use href="./sprite.svg#${iconId}" />
         </svg>
       </div>
       <p>
@@ -29,7 +29,7 @@ const ServiceCard = ({
       <button class="w-fit font-semibold flex gap-2.5 items-center cursor-pointer" data-spoiler="button">
         Подробнее
         <svg class="arrow fill-white transition-transform" data-spoiler="button-arrow">
-          <use href="/sprite.svg#arrow" />
+          <use href="./sprite.svg#arrow" />
         </svg>
       </button>
       <ul data-spoiler="list" class="list-disc list-inside overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0">
@@ -42,7 +42,7 @@ const ServiceCard = ({
       </span>
       <div class="flex justify-between items-center">
         <span class="text-additional font-medium">${duration}</span> 
-        <a href="/contacts.html" class="btn">Обсудить проект</a>
+        <a href="./contacts.html" class="btn">Обсудить проект</a>
       </div>
     </div>
     `;

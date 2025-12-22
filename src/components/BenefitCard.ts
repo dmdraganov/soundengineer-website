@@ -8,7 +8,7 @@ const BenefitCard = ({ iconId, title, description }: Benefit) => {
       class="flex flex-col gap-2.5 items-center mb-[15px] text-center text-additional"
     >
       <svg class="fill-current aspect-square h-10">
-        <use href="/sprite.svg#${iconId}" />
+        <use href="./sprite.svg#${iconId}" />
       </svg>
       <h3 class="font-semibold">${title}</h3>
     </div>
