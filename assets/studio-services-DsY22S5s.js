@@ -1,0 +1,1 @@
+var e=`/soundengineer-website/assets/studio-services-CkaTg2NU.jpg`;export{e as default};

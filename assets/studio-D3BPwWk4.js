@@ -1,0 +1,1 @@
+var e=`/soundengineer-website/assets/studio-D0YQg6eR.jpg`;export{e as default};

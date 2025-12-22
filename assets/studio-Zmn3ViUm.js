@@ -1,1 +1,0 @@
-var e=`/assets/studio-D0YQg6eR.jpg`;export{e as default};

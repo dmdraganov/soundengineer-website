@@ -1,0 +1,1 @@
+var e=`/soundengineer-website/assets/cover1-i8qwM3zN.jpeg`;export{e as default};
