@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://dmdraganov.github.io/soundengineer-website",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,6 +11,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "prettier": "^3.7.4",
     "typescript": "~5.9.3",
     "vite": "npm:rolldown-vite@7.2.5"
