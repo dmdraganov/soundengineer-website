@@ -1,0 +1,1 @@
+var e=`/assets/studio-about-CVQ3eL9i.jpg`;export{e as default};

@@ -1,0 +1,1 @@
+var e=`/assets/alberto-balsalm-CdEql794.mp3`;export{e as default};

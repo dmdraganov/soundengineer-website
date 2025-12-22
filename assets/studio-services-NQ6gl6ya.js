@@ -1,0 +1,1 @@
+var e=`/assets/studio-services-CkaTg2NU.jpg`;export{e as default};
