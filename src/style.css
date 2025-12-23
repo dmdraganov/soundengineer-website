@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-VariableFont_wght.woff2');
+}
 
 @theme {
   --color-bg-primary: #141414;
@@ -9,7 +13,6 @@
 
   --spacing-25px: 25px;
 
-  --font-josefin: 'Josefin Sans', sans-serif;
   --font-montserrat: 'Montserrat', sans-serif;
 
   --img-hero: url('./assets/images/hero.png');
