@@ -15,16 +15,15 @@
 
   --font-montserrat: 'Montserrat', sans-serif;
 
-  --img-hero: url('./assets/images/hero.png');
+  --img-hero: url('./assets/images/hero.webp');
   --img-cover1: url('./assets/images/cover1.jpeg');
   --img-cover2: url('./assets/images/cover2.jpeg');
-  --img-disk: url('./assets/images/disk.jpeg');
-  --img-photo1: url('./assets/images/photo1.jpg');
-  --img-photo2: url('./assets/images/photo2.jpg');
-  --img-studio-reviews: url('./assets/images/studio.jpg');
-  --img-studio-about: url('./assets/images/studio-about.jpg');
-  --img-studio-services: url('./assets/images/studio-services.jpg');
-  --img-studio-portfolio: url('./assets/images/studio-portfolio.jpg');
+  --img-photo1: url('./assets/images/photo1.webp');
+  --img-photo2: url('./assets/images/photo2.webp');
+  --img-studio-reviews: url('./assets/images/studio.webp');
+  --img-studio-about: url('./assets/images/studio-about.webp');
+  --img-studio-services: url('./assets/images/studio-services.webp');
+  --img-studio-portfolio: url('./assets/images/studio-portfolio.webp');
 }
 
 @layer base {

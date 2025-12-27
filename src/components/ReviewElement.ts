@@ -3,8 +3,7 @@ const avatars = import.meta.glob<{ default: string }>('../assets/images/*');
 
 const ReviewElement = async ({ avatar, name, text }: Review) => {
   try {
-    const avatarUrl = (await avatars[`../assets/images/${avatar}`]())
-      .default;
+    const avatarUrl = (await avatars[`../assets/images/${avatar}`]()).default;
 
     const container = document.createElement('div');
     container.className = 'flex gap-25px';
