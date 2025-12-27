@@ -1,0 +1,1 @@
+var e=`/soundengineer-website/assets/studio-services-BJlyTe40.webp`;export{e as default};

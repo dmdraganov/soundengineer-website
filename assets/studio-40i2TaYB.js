@@ -1,0 +1,1 @@
+var e=`/soundengineer-website/assets/studio-B_TKOHi9.webp`;export{e as default};

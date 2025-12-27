@@ -1,0 +1,1 @@
+var e=`/soundengineer-website/assets/hero-By2BOCJV.webp`;export{e as default};

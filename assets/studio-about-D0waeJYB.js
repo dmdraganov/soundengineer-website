@@ -1,0 +1,1 @@
+var e=`/soundengineer-website/assets/studio-about-DM1L6fZB.webp`;export{e as default};

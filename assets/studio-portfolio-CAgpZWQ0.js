@@ -1,0 +1,1 @@
+var e=`/soundengineer-website/assets/studio-portfolio-CTtEcVNS.webp`;export{e as default};
